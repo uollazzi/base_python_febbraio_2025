@@ -11,14 +11,14 @@ print(colore)
 numero = 9
 
 # tipi dato
-stringa = "ciao" # str
+stringa = "ciao"  # str
 
 # numerici
-intero = 9 # int
-decimale = 9.9 # float
+intero = 9  # int
+decimale = 9.9  # float
 
 # booleani
-attivo = True # bool
+attivo = True  # bool
 maggiorenne = False
 
 
@@ -43,32 +43,30 @@ t = "900" + "30"
 print(t)
 
 # sequenze
-lista = [1,2,3] # list
+lista = [1, 2, 3]  # list
 lista = ["pera", "mela", "banana"]
-tupla = (1, "pippo", True) # tuple
-r = range(10) # range
+tupla = (1, "pippo", True)  # tuple
+r = range(10)  # range
 
 print(type(lista))
 print(type(tupla))
 print(type(r))
 
 # mapping
-baggio = {
-    "nome": "Roberto",
-    "cognome": "Baggio",
-    "anni": 54
-} # dict (dictionary)
+baggio = {"nome": "Roberto", "cognome": "Baggio", "anni": 54}  # dict (dictionary)
 
 # none
 x = None
-x = "" # stringa vuota (non è None)
-x = 0 # zero (non è None)
-x = [] # lista vuota (non è None)
+x = ""  # stringa vuota (non è None)
+x = 0  # zero (non è None)
+x = []  # lista vuota (non è None)
 
 # RARI
 # set
-insieme = {"ciao","io","lui"} # set
+insieme = {"ciao", "io", "lui"}  # set
 
 # byte
-b = b"ciao" # byte
+b = b"ciao"  # byte
 b = bytearray(5)
+
+# ciao
