@@ -85,4 +85,7 @@ print(f[0])
 # copia (copia vera)
 f = frutta.copy()
 
+numero_elementi = len(frutta)
+print(numero_elementi)
+
 print("FINITO")
