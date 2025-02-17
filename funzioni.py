@@ -11,6 +11,11 @@ for n in range(5):
 
 # parametro (argomento) della funzione
 def saluta(nome):
+    """Funzione che saluta
+
+    Args:
+        nome (str): il nome da salutare
+    """
     print(f"Ciao {nome.upper()}")
 
 
@@ -36,6 +41,15 @@ presentati(anni=45, nome="Gigi", cognome="Riva")
 
 # torna un valore che posso mettere in una variabile e riutilizzare
 def somma(n1, n2):
+    """_summary_
+
+    Args:
+        n1 (int): _description_
+        n2 (int): _description_
+
+    Returns:
+        int: _description_
+    """
     return n1 + n2
 
 
@@ -70,9 +84,51 @@ def somma_multipla(*numeri):
     return totale
 
 
+risultato = somma_multipla(6, 5, 7)
+
 print(somma_multipla(3, 4, 5))
 print(somma_multipla(3, 4, 65, 45, 89))
 
 
 # print esempio eclatante
 print("Ciao", "Matteo", "Saluti", 89, True)
+
+print("-----")
+# matteo@labforweb.academy
+pippo = "Pluto"
+
+
+# scope delle variabili
+def saluta_pippo():
+    global pippo
+    pippo = "Pippo"
+    print(f"Ciao {pippo}")
+
+
+saluta_pippo()
+print(pippo)
+
+
+# lambda
+# è un modo per definire funzioni anonime che ritornano un valore
+# e il cui corpo possiamo scriverlo su una sola riga
+
+
+def quadrato2(x):
+    return x**2
+
+
+quadrato = lambda x: x**2
+
+print(quadrato(3))
+
+numeri = [1, 2, 3, 4, 5]
+
+maggiori_2 = filter(
+    lambda x: x > 2,
+    numeri,
+)
+print(list(maggiori_2))
+
+numeri_pari = filter(lambda x: x % 2 == 0, numeri)
+print(list(numeri_pari))
