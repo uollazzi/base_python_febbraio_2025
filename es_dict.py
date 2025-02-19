@@ -25,3 +25,14 @@ bici = {
 # 2 taglia più grande (hint: ciclo for)
 # 3 L'indirizzo del Magazzino 2 nel formato seguente: Via Paperino, 445 - ROMA (RM)
 # 4 Stmapare il totale delle biciclette in tutti i magazzini (5)  (hint: ciclo for)
+print(bici["nome"])
+print(max(bici["taglie"]))
+
+m = bici["disp"][1]["indirizzo"]
+print(f"{m["via"]}, {m["civico"]} - {m["citta"]}")
+
+tot = 0
+for mag in bici["disp"]:
+    tot += mag["qta"]
+
+print(tot)
