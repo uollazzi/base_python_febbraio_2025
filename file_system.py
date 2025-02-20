@@ -1,4 +1,5 @@
 import os
+import datetime
 
 # lettura file
 # f = open("demo.txt")
@@ -91,5 +92,34 @@ for anno in anni:
 # recupero informazioni su files e cartelle
 print(os.path.getsize("sales.csv"))
 
-print(os.path.getctime("sales.csv"))
-"2/3/25"
+data_modifica_in_numero = os.path.getctime("sales.csv")
+data_modifica = datetime.datetime.fromtimestamp(data_modifica_in_numero)
+print(data_modifica.timestamp())
+
+# data_modifica
+
+print(data_modifica.year)
+
+adesso = datetime.datetime.now()
+print(adesso.minute)
+
+data_nascita = datetime.datetime(1976, 1, 20)
+
+t = adesso - data_nascita
+print(t)
+print(type(t))
+print(t.days // 365)
+
+# 44 / 6 = 7.3333
+# 44 // 6 = 7
+# 44 % 6 = 2
+
+# https://strftime.org/
+print(adesso.strftime("%d %B %Y ore %H:%M"))
+print(adesso.strftime("%d/%m/%Y"))
+print(adesso)
+
+
+data = "12-09-24"
+d = datetime.datetime.strptime(data, "%d-%m-%y")
+print(d.month)
