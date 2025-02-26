@@ -37,3 +37,11 @@ anna.corri()
 
 nascita = datetime(1976, 1, 20)
 nascita.timestamp()
+
+natale = datetime(2024, 12, 1)
+
+# timestamp() è un metodo di oggetto
+natale.timestamp()
+
+# now() è un metodo di classe
+adesso = datetime.now()
