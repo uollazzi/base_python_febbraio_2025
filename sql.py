@@ -16,7 +16,11 @@ import sqlite3
 def get_products():
     with sqlite3.connect("store.db") as conn:
         products = conn.execute(
-            "SELECT * FROM products"
+            """
+            SELECT p.id, p.name, p.price, p.stock, p.category_id , c.name
+            FROM products p
+            INNER JOIN categories c ON p.category_id = c.id
+            """
         ).fetchall()  # seleziona tutte le righe e le colonne della tabella products
 
         return products
@@ -69,4 +73,4 @@ sell_product(1, 5)
 
 result = get_products()
 for prodotto in result:
-    print(f"{prodotto[1]} - prezzo {prodotto[2]}")
+    print(f"{prodotto[5]} - {prodotto[1]} - prezzo {prodotto[2]}")
